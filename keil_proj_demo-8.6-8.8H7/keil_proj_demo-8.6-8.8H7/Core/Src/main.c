@@ -224,7 +224,7 @@ void blink_led(uint8_t led_num, uint16_t times, uint32_t delay_ms)
   }
 
   /* for 循环：初始化; 判断条件; 每次循环后执行 */
-  for (i = 0U; i < times; i++)
+  for (i = 0U; i <= times; i++)
   {
     led_on(led_num);          /* 点亮指定 LED */
     HAL_Delay(delay_ms);      /* 延时一段时间 */
