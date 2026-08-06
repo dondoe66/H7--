@@ -9,10 +9,12 @@
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\Drivers\\CMSIS\\Device\\ST\\STM32H7xx\\Include",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\Drivers\\CMSIS\\Include",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\hardware\\inc",
+                "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\user\\inc",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\MDK-ARM",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\Core\\Src",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\Drivers\\STM32H7xx_HAL_Driver\\Src",
                 "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\hardware\\src",
+                "d:\\Users\\26150\\Desktop\\train\\H7\\keil_proj_demo-8.6-8.8H7\\keil_proj_demo-8.6-8.8H7\\user\\src",
                 "${default}"
             ],
             "defines": [
