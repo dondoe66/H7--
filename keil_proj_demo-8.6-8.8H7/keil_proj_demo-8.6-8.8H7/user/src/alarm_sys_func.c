@@ -50,7 +50,7 @@ void alarm_sys_func(void)
   case 0U:
     break;
   case 1U:
-    current_led = 1U; /* 练习点：改成 2U，观察从哪颗 LED 开始 */
+    
 
     /* while 循环：条件成立就反复执行 {} 里的代码 */
     while (current_led <= led_count)
