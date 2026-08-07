@@ -1,4 +1,7 @@
-#include <cstdint>
+#include "stdint.h"
+#include "buzzer.h"
+#include "led.h"
+
 void blink_led(uint8_t led_num, uint16_t times, uint32_t delay_ms)
 {
   uint16_t i = 0U; /* 循环计数变量 */
