@@ -40,7 +40,7 @@ void beep(uint32_t beep_ms)
 }
 
 
-uint8_t mode = 1U; /* 0:待机 1:运行流水灯 2:报警：流水灯+蜂鸣器 */
+uint8_t mode = 2U; /* 0:待机 1:运行流水灯 2:报警：流水灯+蜂鸣器 */
 uint8_t current_led;
 
 void alarm_sys_func(void)
