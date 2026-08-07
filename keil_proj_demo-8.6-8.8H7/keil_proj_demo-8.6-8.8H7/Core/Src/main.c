@@ -38,7 +38,7 @@
 #include "led.h"      /* LED 驱动的函数声明 */
 
 #include "user_beep.h" /* 用户自定义蜂鸣器响一声的函数声明 */
-
+#include "alarm_sys_func.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
