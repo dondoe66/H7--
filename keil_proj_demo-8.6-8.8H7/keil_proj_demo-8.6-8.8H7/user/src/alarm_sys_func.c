@@ -2,6 +2,16 @@
 #include "buzzer.h"
 #include "led.h"
 
+#define LED_COUNT   4U    /* 板载 LED 数量，U 表示 unsigned 无符号数 */
+#define BLINK_TIMES 5U    /* 每颗 LED 闪烁次数 */ /* 将闪烁次数改为5 */
+#define DELAY_MS    500U  /* LED 亮/灭持续时间，单位毫秒 */
+#define BEEP_MS     300U  /* 蜂鸣器响一声的时长 */
+
+uint8_t  current_led = 1U;              /* 当前要操作的 LED 编号 */
+uint16_t blink_times = BLINK_TIMES;/* 每颗 LED 闪烁次数 */
+uint32_t delay_ms    = DELAY_MS;   /* 亮/灭延时 */
+const uint8_t led_count = LED_COUNT; /* const 表示该变量不允许修改 */
+
 void blink_led(uint8_t led_num, uint16_t times, uint32_t delay_ms)
 {
   uint16_t i = 0U; /* 循环计数变量 */
