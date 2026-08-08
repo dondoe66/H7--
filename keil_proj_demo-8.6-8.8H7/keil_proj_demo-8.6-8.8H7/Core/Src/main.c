@@ -125,7 +125,29 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    led_blink_func(delay_ms);
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+/*    current_led = 1U; 
+
+    // while 循环：条件成立就反复执行 {} 里的代码 
+    while (current_led <= led_count)
+    {
+      blink_led(current_led, blink_times, delay_ms);
+      current_led++; 
+    }
+*/
+    // beep(BEEP_MS);
+      led_blink_func(delay_ms); 
+    /* if / else 判断：让延时每次变快一点，到 100 后重新回到初始值 */
+    /*if (delay_ms > 100U)
+    {
+      delay_ms += 20U; 
+    }
+    else
+    {
+      delay_ms = DELAY_MS;
+    }*/
   }
   /* USER CODE END 3 */
 }
