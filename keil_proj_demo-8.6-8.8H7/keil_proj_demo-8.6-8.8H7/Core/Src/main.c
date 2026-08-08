@@ -138,7 +138,7 @@ int main(void)
     }
 */
     // beep(BEEP_MS);
-      led_blink_func(delay_ms); 
+      led_blink_func( delay_ms, led_count); 
     /* if / else 判断：让延时每次变快一点，到 100 后重新回到初始值 */
     /*if (delay_ms > 100U)
     {
