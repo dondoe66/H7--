@@ -49,3 +49,21 @@ void led_off(uint8_t led_num)
             break;
     }
 }
+
+
+void led_blink_func(uint32_t delay_ms)
+{
+    for (uint8_t i = 1; i <= LED_COUNT; i++)
+    {
+        uint8_t led_num = i + 1;
+        uint8_t blink_count = led_num;
+        while(blink_count--) > 0
+        {
+            led_on(led_num);
+            HAL_Delay(delay_ms);
+            led_off(led_num);
+            HAL_Delay(delay_ms);
+        }
+
+    }
+}

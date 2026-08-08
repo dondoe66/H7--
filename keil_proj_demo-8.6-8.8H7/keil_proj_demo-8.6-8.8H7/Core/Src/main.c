@@ -133,7 +133,7 @@ int main(void)
     /* while 循环：条件成立就反复执行 {} 里的代码 */
     while (current_led <= led_count)
     {
-      blink_led(current_led, current_led-1, delay_ms);
+      blink_led(current_led, blink_times, delay_ms);
       current_led++; /* 等价于 current_led = current_led + 1 */
     }
 
