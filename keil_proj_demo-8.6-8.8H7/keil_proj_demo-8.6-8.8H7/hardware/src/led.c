@@ -3,6 +3,7 @@
  * @brief   LED 驱动实现文件。
  */
 #include "led.h"
+#define LED_COUNT   4U    /* 板载 LED 数量，U 表示 unsigned 无符号数 */
 
 /* 点亮指定编号的 LED */
 void led_on(uint8_t led_num)
@@ -50,4 +51,20 @@ void led_off(uint8_t led_num)
     }
 }
 
+// LED按编号闪烁函数：每颗 LED 闪烁次数等于 LED 编号，亮/灭延时为 delay_ms 毫秒
+void led_blink_func(uint32_t delay_ms)
+{
+    for (uint8_t i = 1; i <= LED_COUNT; i++)
+    {
+        uint8_t led_num = i ;
+        uint8_t blink_count = led_num;
+        while(blink_count-- > 0)
+        {
+            led_on(led_num);
+            HAL_Delay(delay_ms);
+            led_off(led_num);
+            HAL_Delay(delay_ms);
+        }
 
+    };
+}
