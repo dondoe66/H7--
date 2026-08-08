@@ -3,11 +3,11 @@
 #include "led.h"
 
 #define LED_COUNT   4U    /* 板载 LED 数量，U 表示 unsigned 无符号数 */
-#define BLINK_TIMES 5U    /* 每颗 LED 闪烁次数 */ /* 将闪烁次数改为5 */
+#define BLINK_TIMES 1U    /* 每颗 LED 闪烁次数 */ /* 将闪烁次数改为5 */
 #define DELAY_MS    500U  /* LED 亮/灭持续时间，单位毫秒 */
 #define BEEP_MS     300U  /* 蜂鸣器响一声的时长 */
 
-uint8_t  current_led = 1U;              /* 当前要操作的 LED 编号 */
+uint8_t  current_led ;       /* 当前要操作的 LED 编号 */
 uint16_t blink_times = BLINK_TIMES;/* 每颗 LED 闪烁次数 */
 uint32_t delay_ms    = DELAY_MS;   /* 亮/灭延时 */
 const uint8_t led_count = LED_COUNT; /* const 表示该变量不允许修改 */
@@ -41,7 +41,7 @@ void beep(uint32_t beep_ms)
 
 
 uint8_t mode = 2U; /* 0:待机 1:运行流水灯 2:报警：流水灯+蜂鸣器 */
-uint8_t current_led;
+
 
 void alarm_sys_func(void)
 { 
@@ -50,10 +50,10 @@ void alarm_sys_func(void)
   case 0U:
     break;
   case 1U:
-    
+    current_led = 1U;    
 
     /* while 循环：条件成立就反复执行 {} 里的代码 */
-    while (current_led <= led_count)
+    while (current_led < led_count)
     {
       blink_led(current_led, blink_times, delay_ms);
       current_led++; /* 等价于 current_led = current_led + 1 */
@@ -62,7 +62,7 @@ void alarm_sys_func(void)
   case 2U:
     current_led = 1U;  
 /* while 循环：条件成立就反复执行 {} 里的代码 */
-    while (current_led <= led_count)
+    while (current_led < led_count)
     {
       blink_led(current_led, blink_times, delay_ms);
       current_led++; /* 等价于 current_led = current_led + 1 */
