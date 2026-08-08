@@ -11,7 +11,7 @@ uint8_t  current_led ;       /* 当前要操作的 LED 编号 */
 uint16_t blink_times = BLINK_TIMES;/* 每颗 LED 闪烁次数 */
 uint32_t delay_ms    = DELAY_MS;   /* 亮/灭延时 */
 const uint8_t led_count = LED_COUNT; /* const 表示该变量不允许修改 */
-uint8_t mode = 1U; /* 0:待机 1:运行流水灯 2:报警：流水灯+蜂鸣器 */
+uint8_t mode ; /* 0:待机 1:运行流水灯 2:报警：流水灯+蜂鸣器 */
 
 
 void blink_led(uint8_t led_num, uint16_t times, uint32_t delay_ms)
